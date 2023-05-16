@@ -27,7 +27,7 @@
 
         <div class="row">
 
-            <div class="col-md-4">
+            <div class="col-md-8">
 
                 <div>
                     <h3>
@@ -56,7 +56,7 @@
 
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-4">
 
                 <h3>HASH md5 : </h3>
 
