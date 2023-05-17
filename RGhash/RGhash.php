@@ -120,7 +120,11 @@
                 $attribute_3 = 'type'
             ) {
             if (empty($type)) {
-                return "<$tag $attribute_1='$rel' $attribute_2='$path/$name$extention'>";
+                if(empty($attribute_2)) {
+                    return "<$tag $attribute_1='$rel'>";
+                }else{
+                    return "<$tag $attribute_1='$rel' $attribute_2='$path/$name$extention'>";
+                }
             } else {
                 return "<$tag $attribute_1='$rel' $attribute_3='$type' 
                 $attribute_2='$path/$name$extention'>";
@@ -139,7 +143,13 @@
 
     class Name2Id extends piezas4websites {
 
-        
+        public function div_class ($className) {
+            return $this->inlinetag('','',$className,'','','div','class','','');
+        }
+
+        public function img_alt ($name,$path,$altText,$extention) {
+            return $this->inlinetag($name,$path,$altText,$extention,'','img','alt','src','');
+        }
 
     }
 
