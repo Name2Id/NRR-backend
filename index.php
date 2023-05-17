@@ -4,6 +4,7 @@
 
     $piezas4websites = new piezas4websites;
     $links = new Name2Id;
+    $img = new ramiroSbackN;
 
     echo $piezas4websites->html_(
         'Ramiro G. Glez.', # title - titulo del tab
@@ -15,6 +16,8 @@
     );
 
         //Escriba su codigo aqui
+        echo $img->inlinetag('n2d','./img','imagen random','.png','','img','alt','src','');
+
 
     echo $piezas4websites->_html();
 

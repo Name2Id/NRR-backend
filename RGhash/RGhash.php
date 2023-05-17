@@ -108,6 +108,25 @@
             }
         }
 
+        public function inlinetag (
+                $name,
+                $path,
+                $rel = 'stylesheet',
+                $extention = '.css',
+                $type = '',
+                $tag = 'link',
+                $attribute_1 = 'rel',
+                $attribute_2 = 'href',
+                $attribute_3 = 'type'
+            ) {
+            if (empty($type)) {
+                return "<$tag $attribute_1='$rel' $attribute_2='$path/$name$extention'>";
+            } else {
+                return "<$tag $attribute_1='$rel' $attribute_3='$type' 
+                $attribute_2='$path/$name$extention'>";
+            }
+        }
+
         public function _html () {
             $parteDelbottom = [
                     '</body>
