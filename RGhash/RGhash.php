@@ -100,6 +100,14 @@
             return implode("",$parteDeltop);
         }
 
+        public function addmetafile ($name,$path,$rel = 'stylesheet',$extention = '.css',$type = '') {
+            if (empty($type)) {
+                return "<link rel='$rel' href='$path/$name$extention'>";
+            } else {
+                return "<link rel='$rel' type='$type' href='$path/$name$extention'>";
+            }
+        }
+
         public function _html () {
             $parteDelbottom = [
                     '</body>
