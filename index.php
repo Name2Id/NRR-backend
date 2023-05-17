@@ -27,6 +27,8 @@
          * y ordenada.
          */
 
+         # POST REQUEST IN THIS SIDE
+
     } else {
 
         require_once ('./RGhash/RGhash.php');
@@ -51,6 +53,8 @@
          * para poder agragar mas codigo html de una manera facil
          * y ordenada.
          */
+
+        # GET REQUEST IN THIS SIDE
 
     }
 

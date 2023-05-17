@@ -115,15 +115,25 @@
     }
 
     class ramiroSbackN extends Name2Id {
-        public function conectate_con_pdo_a ($server,$database,$user,$password) {
-
+        function conectate_con_pdo_a ($host, $usuario, $contraseña, $baseDatos) {
             try {
-
-            } catch (PDOException $exception) {
-
+                // Crear una nueva instancia de PDO
+                $pdo = new PDO("mysql:host=$host;dbname=$baseDatos", $usuario, $contraseña);
+                
+                // Configurar el modo de error para generar excepciones en caso de fallos
+                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                
+                // Establecer el conjunto de caracteres de la conexión a UTF-8
+                $pdo->exec("SET NAMES utf8");
+                
+                return $pdo; // Retornar el objeto PDO para utilizar en las consultas
+            } catch (PDOException $e) {
+                // Manejar el error de conexión
+                echo "Error de conexión: " . $e->getMessage();
+                return null;
             }
- 
         }
+        
     }
 
     class rsbn extends ramiroSbackN {

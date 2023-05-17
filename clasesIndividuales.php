@@ -17,9 +17,16 @@
             '<link rel="stylesheet" href="./css/keyframes.css">',
             '<link rel="stylesheet" href="./css/aos.css">'
         ]);
+
+        $rsbn = new ramiroSbackN;
+        $conexion = $rsbn->conectate_con_pdo_a('localhost','root','','test');
+        if ($conexion) {
+            $result = "Conectado (pdo).";
+        }
+    #    
 ?>
 
-<h2>YOU ARE USING ALL THE INDIVIAL CLASSES ONE BY ONE</h2>
+<h2>YOU ARE USING ALL THE INDIVIAL CLASSES ONE BY ONE <?php echo $result; ?></h2>
 
 <div class="rSbN_banner_bottom" data-aos="fade-up">
 
@@ -91,7 +98,10 @@
 <script src="./js/index.js"></script>
 
 <?php
+
+    #
         echo $p4ws->_html();
         
     }
+    
 ?>
