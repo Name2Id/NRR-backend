@@ -16,6 +16,9 @@
 
         if ($idea == 1) {
 
+            $test = new n2d;
+            $hashSha = $test->obtener_hash_actual();
+
             imprime (
                 'RGhash - Clases Empaquetadas',
                 [
@@ -57,6 +60,9 @@
                     </div>
                     </div>
                     </div>",
+                    "<div> she256 : ",
+                    $hashSha,
+                    "</div>",
                     '<script src="https://kit.fontawesome.com/51765d8f2a.js" crossorigin="anonymous"></script>',
                     '<script src="./js/jq.js"></script>',
                     '<script src="./js/bootstrap.min.js"></script>',

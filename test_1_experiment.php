@@ -1,6 +1,10 @@
 <?php 
 
-    $activar_compilador = false;
+    require_once './RGhash/RGhash.php';
+
+    $router = new Name2Id;
+
+    $activar_compilador = true;
 
     if ($activar_compilador) {
 

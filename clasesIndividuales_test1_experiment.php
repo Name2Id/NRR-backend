@@ -91,6 +91,18 @@
 
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <pre>
+            <?php
+                var_dump($_SERVER);
+            ?>
+            </pre>
+        </div>
+    </div>
+</div>
+
 <script src="https://kit.fontawesome.com/51765d8f2a.js" crossorigin="anonymous"></script>
 <script src="./js/jq.js"></script>
 <script src="./js/bootstrap.min.js"></script>
@@ -103,5 +115,5 @@
         echo $p4ws->_html();
         
     }
-    
+
 ?>
